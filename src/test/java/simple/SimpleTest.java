@@ -25,7 +25,7 @@ class SimpleTest {
         int c=a+b;
 
         //Then
-        assertEquals(12,c);
+        assertEquals(11,c);
     }
     @Test
     void testHeader()

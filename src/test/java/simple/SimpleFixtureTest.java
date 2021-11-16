@@ -34,6 +34,8 @@ class SimpleFixtureTest {
     void closeDriver(){
         driver.quit();
     }
+
+    //    @RepeatedIfExceptionsTest(repeats = 3)
     @Test
     void testHeader(){
         log.info("Test header");
