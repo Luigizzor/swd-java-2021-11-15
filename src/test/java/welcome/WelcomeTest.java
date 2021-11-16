@@ -60,7 +60,7 @@ class WelcomeTest {
 //                .containsExactly("Pogácsa", "Kakaóscsiga", "Muffin");
                 .containsExactlyInAnyOrder("Pogácsa", "Kakaóscsiga", "Muffin");
 
-        var message = "Hewllo World";
+        var message = "Hello World";
 //        assertTrue(message.startsWith("Hello"));
 
         assertThat(message)
