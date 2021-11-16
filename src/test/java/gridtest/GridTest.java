@@ -10,7 +10,7 @@ import java.net.URL;
 public class GridTest {
     @Test
     void gridTest(WebDriver driver, URL url){
-        driver.get(url +"/grid");
+        driver.get(url + "/grid");
 
     }
 
