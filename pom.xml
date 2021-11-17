@@ -1,119 +1,105 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+vermanager</artifactId>
+<version>5.0.3</version>
 
-    <groupId>training</groupId>
-    <artifactId>swd-java-2021-11-15</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <properties>
-        <project.build.sourceEncoding>UTF8</project.build.sourceEncoding>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-    </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>4.0.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.8.1</version>
-        </dependency>
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.0.3</version>
-            <scope>test</scope>
+<scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.32</version>
+<dependency>
+<groupId>org.slf4j</groupId>
+<artifactId>slf4j-api</artifactId>
+<version>1.7.32</version>
 
-            <scope>test</scope>
-        </dependency>
+<scope>test</scope>
+</dependency>
 
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.6</version>
+<dependency>
+<groupId>ch.qos.logback</groupId>
+<artifactId>logback-classic</artifactId>
+<version>1.2.6</version>
 
-            <scope>test</scope>
-        </dependency>
+<scope>test</scope>
+</dependency>
 
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jul-to-slf4j</artifactId>
-            <version>1.7.32</version>
+<dependency>
+<groupId>org.slf4j</groupId>
+<artifactId>jul-to-slf4j</artifactId>
+<version>1.7.32</version>
 
-            <scope>test</scope>
-        </dependency>
+<scope>test</scope>
+</dependency>
 
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
+<dependency>
+<groupId>org.projectlombok</groupId>
+<artifactId>lombok</artifactId>
+<version>1.18.22</version>
 
-            <scope>runtime</scope>
-        </dependency>
+<scope>runtime</scope>
+</dependency>
 
-        <dependency>
-            <groupId>io.github.artsok</groupId>
-            <artifactId>rerunner-jupiter</artifactId>
-            <version>2.1.6</version>
+<dependency>
+<groupId>io.github.artsok</groupId>
+<artifactId>rerunner-jupiter</artifactId>
+<version>2.1.6</version>
 
-            <scope>test</scope>
-        </dependency>
+<scope>test</scope>
+</dependency>
 
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>3.21.0</version>
-        </dependency>
+<dependency>
+<groupId>org.assertj</groupId>
+<artifactId>assertj-core</artifactId>
+<version>3.21.0</version>
 
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>4.1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>4.1.2</version>
-        </dependency>
+<scope>test</scope>
+</dependency>
 
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml-schemas</artifactId>
-            <version>4.1.2</version>
-        </dependency>
+<dependency>
+<groupId>org.apache.poi</groupId>
+<artifactId>poi</artifactId>
+<version>4.1.2</version>
+</dependency>
+<dependency>
+<groupId>org.apache.poi</groupId>
+<artifactId>poi-ooxml</artifactId>
+<version>4.1.2</version>
+</dependency>
 
-    </dependencies>
+<dependency>
+<groupId>org.apache.poi</groupId>
+<artifactId>poi-ooxml-schemas</artifactId>
+<version>4.1.2</version>
+</dependency>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
-               <!-- <configuration>-->
-                <!--    <includes>-->
-                <!--              <include>extension.SimpleTest</include>-->
-                <!--      </includes>-->
-                <!--             <systemProperties>-->
-                <!--                  <selenium.url>https://training360.com</selenium.url>-->
-                <!--             </systemProperties>-->
-                <!--  </configuration>-->
-            </plugin>
-        </plugins>
+        </dependencies>
 
-    </build>
+<build>
+<plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.2</version>
 
-</project>
+        <configuration>
+            <groups>components</groups>
+        </configuration>
+
+
+        <!--                <version>3.0.0-M5</version>-->
+        <!--                <configuration>-->
+        <!--                    <rerunFailingTestsCount>2</rerunFailingTestsCount>-->
+        <!--                </configuration>-->
+        <!--                <configuration>-->
+        <!--                    <includes>-->
+        <!--                        <include>extension.SimpleTest</include>-->
+        <!--                    </includes>-->
+        <!--                    <systemProperties>-->
+        <!--                        <selenium.url>https://training360.com</selenium.url>-->
+        <!--                    </systemProperties>-->
+        <!--                </configuration>-->
+
+    </plugin>
+</plugins>
+
+</build>
+
+
+        </project>
